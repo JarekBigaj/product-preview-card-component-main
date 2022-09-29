@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Fraunces';
+    src: url('fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+body{
+    background-color: hsl(30,38%,92%);
+}
+.product_previev_card_container{
+    width: 45%;
+    height: 45%;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: 50% 50%;
+    padding: none;
+    margin: 90px auto 90px auto;
+    color:hsl(228, 12%, 48%);
+    background-color: hsl(0, 0%, 100%);
+}
+#product_image{
+    background-image: url("/images/image-product-desktop.jpg");
+    border-radius:10px 0px 0px 10px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid_item{
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+.product_information{
+
+    margin:30px;
+}
+#preview{
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+#product_name{
+    font-family: "Fraunces";
+    font-weight: 700;
+    color:hsl(212, 21%, 14%);
+}
+.product_description{
+   font-family: "Montserrat";
+   font-size: 14px;
+   font-weight: 500;
+}
+.current_price{
+    font-family: "Fraunces";
+    font-size: 20pt;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+.last_price{
+    font-size: small;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-left: 20px;
+}
+.add_to_cart_button{
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: hsl(158, 36%, 37%);
+    border-color:hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+}
+.cart_image{
+    padding-right: 5px;
+}
+
+.add_to_cart_button:hover{
+    cursor: pointer;
+    background-color: hsl(158, 36%, 20%);
+    border-color:hsl(158, 36%, 20%);
+}
+
+@media screen and (max-width: 800px){
+    
+    .product_previev_card_container{
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+    .grid_item{
+        height: fit-content;
+        
+    }
+    #product_image{
+        background-repeat: no-repeat;
+        background-image: url(/images/image-product-mobile.jpg);
+        border-radius:10px 10px 0px 0px;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+    }
+
+}
